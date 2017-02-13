@@ -53,7 +53,7 @@ window.onload = function main()
 	mon.add(Course.create(10*60 + 10, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev, 0 ));
 	mon.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  toe,  IVk(518),     churkin  ));
 	mon.add(Course.create(13*60 + 45, 1*60 + 25, SEMINAR,  eng,  Ik('???'),       unknown ));
-	mon.add(Course.create(15*60 + 25, 1*60 + 25, PRACTICE,  sport,  sk()			 ));
+	mon.add(Course.create(15*60 + 25, 1*60 + 25, PRACTICE,  sport,  sk(), 		unknown	 ));
 	
 	tue.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, toe,  IVk('322а'),     churkin      , 0));
 	tue.add(Course.create( 10*60 +  10, 1*60 + 25, PRACTICE, toe,  IVk('322а'),     churkin      , 1));
