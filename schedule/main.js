@@ -64,7 +64,7 @@ window.onload = function main()
 	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  specphis,  IVk('330a'),    ostertak,    0));
 	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  foe,  IVk(208),    byalic,    1));
 	wed.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev));
-	wed.add(Course.create(13*60 + 45, 1*60 + 25, PRACTICE,  sport,  sk()			 ));
+	wed.add(Course.create(13*60 + 45, 1*60 + 25, PRACTICE,  sport,  sk(),		unknown	 ));
 	
 	thu.add(Course.create( 8*60 +  30, 1*60 + 25, LECTURE, specmat,  IVk(303),       mirenkova    ));
 	thu.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, spp,  IVk(519),       reshetnicov    ));
