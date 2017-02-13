@@ -2,7 +2,7 @@ window.onload = function main()
 {
 	frame.init();
 	
-	var week = Week.create( 8*60 + 30, 6*(1*60 + 50), 1*60 + 35);
+	var week = Week.create( 8*60 + 30, 6*(1*60 + 40), 1*60 + 35);
 	week.paddingTop = 28;
 	week.paddingLeft = 64;
 	
