@@ -50,26 +50,37 @@ window.onload = function main()
 	    PRACTICE = Type.create('Практикум');
 	    ASSIGN   = Type.create('Сдача');
 	
-	mon.add(Course.create(10*60 + 10, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev, 1 ));
+	mon.add(Course.create(10*60 + 10, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev, 0 ));
 	mon.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  toe,  IVk(518),     churkin  ));
 	mon.add(Course.create(13*60 + 45, 1*60 + 25, SEMINAR,  eng,  Ik('???'),       unknown ));
 	mon.add(Course.create(15*60 + 25, 1*60 + 25, PRACTICE,  sport,  sk()			 ));
 	
-//	tue.add(Course.create( 12*60 +  40, 1*60 + 25, LECTURE, ast,  nsu('БА'),     surdin      ));
+	tue.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, toe,  IVk('322а'),     churkin      , 0));
+	tue.add(Course.create( 10*60 +  10, 1*60 + 25, PRACTICE, toe,  IVk('322а'),     churkin      , 1));
+	tue.add(Course.create( 11*60 +  50, 1*60 + 25, LECTURE, phil,  IVk('519'),     sandakova     ));
+	tue.add(Course.create( 13*60 +  45, 1*60 + 25, SEMINAR, phil,  IVk('322а'),     sandakova      , 1));
 	
-//	wed.add(Course.create(10*60 + 45, 1*60 + 25, LECTURE,  det,  inp('КЗал'),    zhulanov    ));
+	wed.add(Course.create(8*60 + 30, 1*60 + 25, LECTURE,  foe,  IVk(303),    byalic    ));
+	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  specphis,  IVk('330a'),    ostertak,    0));
+	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  foe,  IVk(208),    byalic,    1));
+	wed.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev));
+	wed.add(Course.create(13*60 + 45, 1*60 + 25, PRACTICE,  sport,  sk()			 ));
 	
-//	thu.add(Course.create( 9*60 +  0, 1*60 + 25, PRACTICE, net,  inp(508),       sosedkin    ));
+	thu.add(Course.create( 8*60 +  30, 1*60 + 25, LECTURE, specmat,  IVk(303),       mirenkova    ));
+	thu.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, spp,  IVk(519),       reshetnicov    ));
 
-//	fri.add(Course.create(10*60 + 50, 1*60 + 25, SEMINAR,  sbp,  nsu(326),       kozhevnikov ));
+	fri.add(Course.create(8*60 + 30, 1*60 + 25, LECTURE,  specphis,  IVk(424),       krasnopevcev ));
+	fri.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  spp,  IVk(318),       geyst ));
+	fri.add(Course.create(11*60 + 50, 1*60 + 25, SEMINAR,  specmat,  IVk('330a'),       mirenkova ));
+	fri.add(Course.create(13*60 + 45, 1*60 + 25, SEMINAR,  mmp,  IVk(303),       berdinskiy ));
 	
 //	sat.add(Course.create( 9*60 +  0, 1*60 + 25, LECTURE,  phil, nsu('БА'),      tsyplakov   ));
 	
 	week.add(mon);
-//	week.add(tue);
-//	week.add(wed);
-//	week.add(thu);
-//	week.add(fri);
+	week.add(tue);
+	week.add(wed);
+	week.add(thu);
+	week.add(fri);
 //	week.add(sat);
 	
 	frame.add(week);
