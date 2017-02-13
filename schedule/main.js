@@ -26,7 +26,7 @@ window.onload = function main()
 	    specphis = Subject.create( 'Спец.гл.Физики', '../courses/phil.html', Subject.LIBERAL );
 	    
 	var 
-	    krsnopevcev = Teacher.create('Краснопевцев'),
+	    krasnopevcev = Teacher.create('Краснопевцев'),
 	    churkin = Teacher.create('Чуркин'),
 	    sandakova = Teacher.create('Сандакова'),
 	    byalic = Teacher.create('Бялик'),
