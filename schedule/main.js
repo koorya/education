@@ -1,5 +1,6 @@
 window.onload = function main()
 {
+
 	frame.init();
 	
 	var week = Week.create( 8*60 + 30, 5*(1*60 + 40), 1*60 + 40);
@@ -50,19 +51,19 @@ window.onload = function main()
 	    PRACTICE = Type.create('Практикум');
 	    ASSIGN   = Type.create('Сдача');
 	
-	mon.add(Course.create(10*60 + 10, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev, 0 ));
+	mon.add(Course.create(10*60 + 10, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev, ['CH'] ));
 	mon.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  toe,  IVk(518),     churkin  ));
 	mon.add(Course.create(13*60 + 45, 1*60 + 25, SEMINAR,  eng,  Ik('???'),       unknown ));
 	mon.add(Course.create(15*60 + 25, 1*60 + 25, PRACTICE,  sport,  sk(), 		unknown	 ));
 	
-	tue.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, toe,  IVk('322а'),     churkin      , 0));
-	tue.add(Course.create( 10*60 +  10, 1*60 + 25, PRACTICE, toe,  IVk('322а'),     churkin      , 1));
+	tue.add(Course.create( 10*60 +  10, 1*60 + 25, LECTURE, toe,  IVk('322а'),     churkin      , ['CH']));
+	tue.add(Course.create( 10*60 +  10, 1*60 + 25, PRACTICE, toe,  IVk('322а'),     churkin      , ['NCH']));
 	tue.add(Course.create( 11*60 +  50, 1*60 + 25, LECTURE, phil,  IVk('519'),     sandakova     ));
-	tue.add(Course.create( 13*60 +  45, 1*60 + 25, SEMINAR, phil,  IVk('322а'),     sandakova      , 1));
+	tue.add(Course.create( 13*60 +  45, 1*60 + 25, SEMINAR, phil,  IVk('322а'),     sandakova      , ['NCH']));
 	
 	wed.add(Course.create(8*60 + 30, 1*60 + 25, LECTURE,  foe,  IVk(303),    byalic    ));
-	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  specphis,  IVk('330a'),    ostertak,    0));
-	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  foe,  IVk(208),    byalic,    1));
+	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  specphis,  IVk('330a'),    ostertak,    ['CH']));
+	wed.add(Course.create(10*60 + 10, 1*60 + 25, SEMINAR,  foe,  IVk(208),    byalic,    ['NCH']));
 	wed.add(Course.create(11*60 + 50, 1*60 + 25, LECTURE,  mmp,  IVk(4),       krasnopevcev));
 	wed.add(Course.create(13*60 + 45, 1*60 + 25, PRACTICE,  sport,  sk(),		unknown	 ));
 	
@@ -75,13 +76,24 @@ window.onload = function main()
 	fri.add(Course.create(13*60 + 45, 1*60 + 25, SEMINAR,  mmp,  IVk(303),       berdinskiy ));
 	
 //	sat.add(Course.create( 9*60 +  0, 1*60 + 25, LECTURE,  phil, nsu('БА'),      tsyplakov   ));
-	
+	if (g()==1){
+		thu.add(Course.create( 11*60 +  50, 1*60 + 25, PRACTICE, foe,  IVk(122),       	byalic, [2,6,10,14]    ));
+		thu.add(Course.create( 11*60 +  50, 1*60 + 25, PRACTICE, spp,  IVk(322),       geyst,  [3,7,11,15]    ));
+		thu.add(Course.create( 13*60 +  45, 1*60 + 25, PRACTICE, foe,  IVk(122),       byalic, [2,6,10,14]    ));
+		thu.add(Course.create( 13*60 +  45, 1*60 + 25, PRACTICE, spp,  IVk(322),       geyst,  [3,7,11,15]    ));
+	}
+	if (g()==2){
+		thu.add(Course.create( 11*60 +  50, 1*60 + 25, PRACTICE, foe,  IVk(122),       	byalic, [4,8,12,16]    ));
+		thu.add(Course.create( 11*60 +  50, 1*60 + 25, PRACTICE, spp,  IVk(322),       geyst,  [5,9,13,17]    ));
+		thu.add(Course.create( 13*60 +  45, 1*60 + 25, PRACTICE, foe,  IVk(122),       byalic, [4,8,12,16]    ));
+		thu.add(Course.create( 13*60 +  45, 1*60 + 25, PRACTICE, spp,  IVk(322),       geyst,  [5,9,13,17]    ));
+	}
 	week.add(mon);
 	week.add(tue);
 	week.add(wed);
 	week.add(thu);
 	week.add(fri);
-//	week.add(sat);
+	week.add(sat);
 	
 	frame.add(week);
 	

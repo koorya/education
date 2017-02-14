@@ -114,15 +114,31 @@ Course.create = function (start,length,type,name,place,teacher,flicker)
 	
 	course.isUnable = function (date)
 	{
+//		var date = new Date(2017, 1, 28);
 		if(flicker != undefined)
 		{
-			var onejan = new Date(date.getFullYear(),0,1);
-			var doy = Math.ceil((date - onejan) / 86400000) + onejan.getDay();
-			var week_flicker = Math.ceil(doy/7) % 2;
-			if(this.flicker != week_flicker)
-			{
-				return true;
-			}
+			var ret = true;
+			this.flicker.forEach(function (item, i, arr){
+				var onejan = new Date(date.getFullYear(),1,6); //начало семестра
+				var doy = Math.ceil((date - onejan) / 86400000) + onejan.getDay();
+				var week_flicker = Math.ceil(doy/7) % 2;
+				if(item == 'NCH'){
+					if(week_flicker==1)
+						ret = false;
+					return;
+				}
+				if(item == 'CH'){
+					if(week_flicker==0)
+						ret = false;
+					return;
+				}
+				if(Number.isInteger(item)){
+					if(Math.ceil(doy/7) == item)
+						ret = false;
+					return;
+				}
+			});
+			return ret;
 		}
 		return false;
 	}
