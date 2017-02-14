@@ -43,7 +43,7 @@ window.onload = function main()
 	    IIk = function (aud) { return Location.create("II",aud); };
 	    IIIk = function (aud) { return Location.create("III",aud); };
 	    IVk = function (aud) { return Location.create("IV",aud); };
-	    sk = function (aud) { return Location.create("СК"); };
+	    sk = function (aud) { return Location.create("СК",""); };
 		
 	var 
 	    LECTURE  = Type.create('Лекция'),
