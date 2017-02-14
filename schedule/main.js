@@ -93,7 +93,7 @@ window.onload = function main()
 	week.add(wed);
 	week.add(thu);
 	week.add(fri);
-	week.add(sat);
+//	week.add(sat);
 	
 	frame.add(week);
 	
